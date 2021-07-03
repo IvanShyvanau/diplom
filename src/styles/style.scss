@@ -1,0 +1,17 @@
+@import './fonts.scss';
+
+.fontOpen{
+  font-family: 'OpenSanaBold', serif;
+  font-size: 30px;
+}
+
+body{
+  background-color: blue;
+}
+.class-icon{
+  background: url(../assets/img/image.jpg);
+  width: 800px;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+} 
