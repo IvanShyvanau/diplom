@@ -1,17 +1,13 @@
-@import './fonts.scss';
+@import "~normalize.css";
 
-.fontOpen{
-  font-family: 'OpenSanaBold', serif;
-  font-size: 30px;
-}
 
-body{
-  background-color: blue;
-}
-.class-icon{
-  background: url(../assets/img/image.jpg);
-  width: 800px;
-  height: 400px;
-  background-size: cover;
-  background-position: center;
-} 
+//abstract
+@import"./abstract/_constants";
+@import"./abstract/_mixin";
+@import"./abstract/_placeholders";
+
+//base
+@import"./base/_base";
+
+//components
+@import"./components/_headerHome";

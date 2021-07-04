@@ -1,3 +1,1 @@
-export const showMeMessage = () => {
-  alert('message');
-}
+import test from './nav';
