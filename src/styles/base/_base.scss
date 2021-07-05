@@ -11,12 +11,12 @@ body {
 
 h1{
   @extend %font-text;
-  @include font($height: 1.0rem, $size: 3.8rem);
+  @include font($height: 1.0rem, $size: 3.8rem, $weigh: normal);
   } 
 
 h2{
   @extend %font-title;
-  @include font($height: 1rem, $size: 3.2rem);
+  @include font($height: 1rem, $size: 3.2rem, $weigh: normal);
   } 
 
 h3{
