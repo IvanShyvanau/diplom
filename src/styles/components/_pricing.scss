@@ -140,5 +140,9 @@
     font-size: 1.8rem;
     font-weight: bold;
     color: #0F5F5C;
+    &:hover{
+      text-decoration: underline;
+      
+    }
   }
 }
