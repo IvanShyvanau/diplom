@@ -32,7 +32,13 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HTMLWebpackPlugin({
+      filename: 'index.html',
       template: './index.html',
+      inject: true
+    }),
+    new HTMLWebpackPlugin({
+      filename: 'aboutUs.html',
+      template: '/aboutUs/aboutUs.html',
       inject: true
     }),
     new MiniCssExtractPlugin({
