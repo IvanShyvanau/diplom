@@ -24,7 +24,7 @@ module.exports = {
     historyApiFallback: true,
     open: true,
     overlay: true,
-    port: 4201
+    port: 3000
   },
   resolve: {
     extensions: ['*', '.js', '.jsx'],
@@ -38,7 +38,7 @@ module.exports = {
     }),
     new HTMLWebpackPlugin({
       filename: 'aboutUs.html',
-      template: '/aboutUs/aboutUs.html',
+      template: './aboutUs/aboutUs.html',
       inject: true
     }),
     new MiniCssExtractPlugin({
