@@ -16,15 +16,26 @@ module.exports = {
   },
   output: {
     filename: '[name].[contenthash].bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+  },
+  optimization: {
+    splitChunks: {
+      chunks: "all"
+    }
   },
   devtool: 'source-map',
   devServer: {
     compress: true,
-    historyApiFallback: true,
     open: true,
     overlay: true,
-    port: 3000
+    port: 3000,
+    historyApiFallback: true,
+    contentBase: [
+      path.join(__dirname, 'src'),
+      path.join(__dirname, 'aboutUs'),
+      path.join(__dirname, 'pricing'),
+      path.join(__dirname, 'contactUs'),
+    ]
   },
   resolve: {
     extensions: ['*', '.js', '.jsx'],
@@ -41,8 +52,19 @@ module.exports = {
       template: './aboutUs/aboutUs.html',
       inject: true
     }),
+    new HTMLWebpackPlugin({
+      filename: 'pricing.html',
+      template: './pricing/pricing.html',
+      inject: true
+    }),
+    new HTMLWebpackPlugin({
+      filename: 'contactUs.html',
+      template: './contactUs/contactUs.html',
+      inject: true,
+    }),
     new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].bundle.css'
+      filename: '[name].[contenthash].bundle.css',
+
     }),
     new CopyWebpackPlugin({
       patterns: [{
