@@ -1,3 +1,1 @@
-export const findLastElement = () => {
-  console.log('last');
-}
+import "/aboutUs/styles/style.scss";
