@@ -32,5 +32,13 @@ h3{
 .container{
   width: $content-width;
   margin: auto;
+  @include media-mobile{
+    color: blue;
+    width: 100%
+  }
+  @include media-tablet{
+    width: 100%
+  }
+  
 }
   

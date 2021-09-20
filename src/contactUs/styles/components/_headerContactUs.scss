@@ -1,4 +1,4 @@
-.header-wrapper{
+.header-wrapperConst{
   display: flex;
   align-items: flex-start;
   width: 100%;
@@ -9,7 +9,7 @@
   background-color: #fff
 }
 
-.header-main{
+.header-mainConst{
   width: 100%;
   display: flex;
   align-items: center;
@@ -21,12 +21,12 @@
 
 
 // main logo
-.header-logo{
+.header-logoConst{
   display: flex;
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  &__border{
+  &__borderConst{
     content: " ";
     width: 2px;
     height: 21px;
@@ -35,38 +35,38 @@
   }
 }
 
-.header-logo__border{
+.header-logo__borderConst{
   border-left: 2px solid #83A7A5;
   height: 21px;
 }
 
-.phone-logo{
+.phone-logoConst{
   width: 14px;
   height: 14px;
   color: $color-text;
 }
-.phone{
+.phoneConst{
   display: flex;
   align-items: center;
   @extend %font-nav;
   @include font($height: 1rem, $size: 1.3rem, $weigh: normal);
   margin-left: 6px;
-  &-number{
+  &-numberConst{
     margin-left: 6px;
   }
-  &-number__link{
+  &-number__linkConst{
     text-decoration: none;
     color: $color-text;
   }
 }
 
-.logo{
+.logoConst{
   @extend %font-logo;
   @include font($height: 1rem, $size: 2rem, $weigh: bold);
   text-transform: uppercase;
 }
 
-.logo-link{
+.logo-linkConst{
   text-decoration: none;
   color: $color-text;
   &:hover{
@@ -77,10 +77,10 @@
 
 
 //navigation
-.navigation{
+.navigationConst{
   position: relative;
   display: flex;
-  &-list__link{
+  &-list__linkConst{
     text-decoration: none;
     padding: 12px 10px;
     position: relative;
@@ -97,17 +97,18 @@
       color: #fff;
     }
   }
-  &-list{
+  &-listConst{
   display: flex;
   list-style-type: none;
   @extend %font-nav;
   @include font($height: 1rem, $size: 1.3rem, $weigh: normal);
   text-transform: uppercase;
   }
-  &-list__item{
+  &-list__itemConst{
     margin-left: 15px;
   }
 }
+
 
 .border-botom{
   position: relative;
@@ -118,6 +119,13 @@
   margin-top: 36px;
 }
 
-.header-contant{
+.header-contantConst{
   margin-top: 26px;
+  @include media-mobile{
+    color: blue;
+    width: 100%
+  }
+  @include media-tablet{
+    width: 100%
+  }
 }

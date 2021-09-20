@@ -1,5 +1,6 @@
 .contact{
   color: $color-text;
+  width: 100%;
   &-wrapper{
     display: flex;
     flex-direction: column;
@@ -29,9 +30,7 @@
     justify-content: space-around;
     margin-top: 76px;
   }
-  &-form-list{
-
-  }
+  
   &-form{
     display: flex;
     flex-direction: column;

@@ -1,3 +1,4 @@
+
 .header-wrapper{
   display: flex;
   align-items: flex-start;
@@ -149,7 +150,7 @@
 
 .text{
   @extend %font-text;
-  @include font($height: 1.5rem, $size: 1.3rem);
+  @include font($height: 2.5rem, $size: 1.3rem);
   margin-top: 13px;
   } 
 
@@ -167,3 +168,570 @@
   cursor: pointer;
 }
 
+// правка
+.header-wrapperConst{
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  height: 670px;
+  border-color: #EEF1EC;
+  color: $color-text;
+  flex-direction: column;
+  background-color: #fff;
+  @include media-mobile{
+    
+  }
+  @include media-tablet{
+    height: 420px
+  }
+}
+
+.header-mainConst{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 32px;
+  color: $color-text;
+}
+
+
+// main logo
+.header-logoConst{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  &__borderConst{
+    content: " ";
+    width: 2px;
+    height: 21px;
+    color: $color-text;
+    margin-left: 24px;
+  }
+}
+
+.header-logo__borderConst{
+  border-left: 2px solid #83A7A5;
+  height: 21px;
+  margin-left: 10px;
+}
+
+.phone-logoConst{
+  width: 14px;
+  height: 14px;
+  color: $color-text;
+}
+.phoneConst{
+  display: flex;
+  align-items: center;
+  @extend %font-nav;
+  @include font($height: 1rem, $size: 1.3rem, $weigh: normal);
+  margin-left: 6px;
+  &-numberConst{
+    margin-left: 6px;
+  }
+  &-number__linkConst{
+    text-decoration: none;
+    color: $color-text;
+  }
+}
+
+.logoConst{
+  @extend %font-logo;
+  @include font($height: 1rem, $size: 2rem, $weigh: bold);
+  text-transform: uppercase;
+}
+
+.logo-linkConst{
+  text-decoration: none;
+  color: $color-text;
+  &:hover{
+    color:$color-primary;
+    @extend %transition;
+  }
+}
+
+
+//navigation
+.navigationConst{
+  position: relative;
+  display: flex;
+  &-list__linkConst{
+    text-decoration: none;
+    padding: 12px 10px;
+    position: relative;
+    border-radius: 5px;
+    color: #83A7A5;
+    font-weight: bold;
+    &:hover{
+      content: " ";
+      background-color: $color-primary;
+      z-index: 2;
+      position: relative;
+      @extend %transition;
+      opacity: 0.5;
+      color: #fff;
+    }
+  }
+  &-listConst{
+  display: flex;
+  list-style-type: none;
+  @extend %font-nav;
+  @include font($height: 1rem, $size: 1.3rem, $weigh: normal);
+  text-transform: uppercase;
+  }
+  &-list__itemConst{
+    margin-left: 15px;
+  }
+}
+
+
+
+.border-botom{
+  position: relative;
+  width: 1130px;
+  height: 2px;
+  background-color: $color-text;
+  margin: auto;
+  margin-top: 36px;
+}
+
+.header-contantConst{
+  margin-top: 26px;
+}
+.picfon{
+  @include media-mobile{
+    width: 100%;
+  }
+  @include media-tablet{
+    width: 800px;
+  }
+}
+
+
+//форма для обратной связи пока так )
+.contact{
+  color: $color-text;
+  &-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &-titles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &-titles-border{
+    margin: auto;
+    width: 66px;
+    height: 2px;
+    background-color: #6FB048;
+    margin-top: 0px;
+  }
+  &-titles-text{
+    width: 70%;
+    text-align: center;
+    line-height: 1.6rem;
+    margin-top: 15px;
+  }
+  &-forms{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 76px;
+    @include media-mobile{
+      width: 50%;
+    }
+    @include media-tablet{
+      width: 100%;
+  
+    }
+  }
+  &-form{
+    display: flex;
+    flex-direction: column;
+    @include media-mobile{
+      width: 80%;
+    }
+    @include media-tablet{
+     
+    }
+    
+  }
+  &-nameInput, &-emailInput, &-phoneInput{
+    padding: 18px 453px 18px 21px;
+    margin-bottom: 25px;
+    color: $color-text;
+    @include media-mobile{
+      width: 80%;
+    }
+    @include media-tablet{
+      padding: 18px 200px 18px 21px;
+    }
+  }
+  &-message{
+    resize: none;
+    &::placeholder{
+      padding: 18px 453px 18px 21px;
+      @include media-mobile{
+        width: 80%;
+      }
+      @include media-tablet{
+        width: 80%;
+        padding: 18px 453px 18px 21px;
+      }
+    }
+  }
+  &-btn{
+    margin-top: 23px;
+    text-transform: uppercase;
+    @extend %font-testimonials;
+    @include font($height: 1rem, $size: 1.3rem, $weigh: normal);
+    padding: 18px 43px;
+    width: 30%;
+    background-color: $color-primary;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+    @include media-mobile{
+      width: 80%;
+    }
+    @include media-tablet{
+      width: 50%;
+    }
+  }
+  &-contacts{
+    width: 30%;
+    border: 1px dashed $color-text;
+    height: 274px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @include media-mobile{
+      display: flex;
+    }
+    @include media-tablet{
+  
+    }
+  }
+  &-titleContacts{
+    margin-top: 39px;
+    font-size: 2.2rem;
+    color: #0F5F5C;
+    text-align: center;
+    margin-left: 43px;
+  }
+  &-adress{
+    margin-top: 35px;
+    display: flex;
+    margin-left: 43px;
+    font-size: 1.5rem;
+  }
+  &-imgAdress{
+    width: 14px;
+    height: 20px;
+  }
+  &-adressText{
+    margin-left: 11px;
+    line-height: 1.5rem;
+  }
+  &-phone{
+    margin-top: 35px;
+    display: flex;
+    margin-left: 43px;
+    font-size: 1.5rem;
+  }
+  &-number{
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+  }
+  &-numberLink{
+    text-decoration: none;
+    color:$color-text;
+    font-size: 1.5rem;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  &-email{
+    margin-top: 35px;
+    display: flex;
+    margin-left: 43px;
+    font-size: 1.5rem;
+  }
+  &-imgMail{
+    width: 18px;
+    height: 12px;
+  }
+  &-emailAdress{
+    margin-left: 11px;
+  }
+  &-emailLink{
+    text-decoration: none;
+    color:$color-text;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0F5F5C;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+} 
+
+.contact-form-list{
+  @include media-mobile{
+    display: flex;
+  }
+  @include media-tablet{
+  }
+}
+
+.callToActionContacts{
+  color: $color-text;
+  &-wrapper{
+    width: 100%;
+    height: 201px;
+    display: flex;
+    align-items: center;
+    background-color: $color-background2;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  &-content{
+    width: 31%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include media-mobile{
+      display: flex;
+    }
+    @include media-tablet{
+      width: 100%;
+    }
+  }
+  &-title{
+    @extend %font-title;
+    @include font($height: 1rem, $size: 2.8rem);
+  }
+  &-button{
+    padding: 17px 23px;
+    border: none;
+    border-radius: 2px;
+    background-color: $color-primary;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+//header for pricing
+.headerPrc-wrapper{
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  height: 861px;
+  border-color: #EEF1EC;
+  color: $color-text;
+  flex-direction: column;
+  background-color: $color-background2;
+}
+
+.headerPrc-main{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 32px;
+  color: $color-text;
+}
+
+
+// main logo
+.headerPrc-logo{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  &__border{
+    content: " ";
+    width: 2px;
+    height: 21px;
+    color: $color-text;
+    margin-left: 24px;
+  }
+}
+
+.headerPrc-logo__border{
+  border-left: 2px solid #83A7A5;
+  height: 21px;
+}
+
+.phonePrc-logo{
+  width: 14px;
+  height: 14px;
+  color: $color-text;
+}
+.phonePrc{
+  display: flex;
+  align-items: center;
+  @extend %font-nav;
+  @include font($height: 1rem, $size: 1.3rem, $weigh: normal);
+  margin-left: 6px;
+  &-number{
+    margin-left: 6px;
+  }
+  &-number__link{
+    text-decoration: none;
+    color: $color-text;
+  }
+}
+
+.logoPrc{
+  @extend %font-logo;
+  @include font($height: 1rem, $size: 2rem, $weigh: bold);
+  text-transform: uppercase;
+}
+
+.logoPrc-link{
+  text-decoration: none;
+  color: $color-text;
+  &:hover{
+    color:$color-primary;
+    @extend %transition;
+  }
+}
+
+
+//navigation
+.navigationPrc{
+  position: relative;
+  display: flex;
+  &-list__link{
+    text-decoration: none;
+    padding: 12px 10px;
+    position: relative;
+    border-radius: 5px;
+    color: #83A7A5;
+    font-weight: bold;
+    &:hover{
+      content: " ";
+      background-color: $color-primary;
+      z-index: 2;
+      position: relative;
+      @extend %transition;
+      opacity: 0.5;
+      color: #fff;
+    }
+  }
+  &-list{
+  display: flex;
+  list-style-type: none;
+  @extend %font-nav;
+  @include font($height: 1rem, $size: 1.3rem, $weigh: normal);
+  text-transform: uppercase;
+  }
+  &-list__item{
+    margin-left: 15px;
+  }
+}
+
+.borderPrc-botom{
+  position: relative;
+  width: 1130px;
+  height: 2px;
+  background-color: $color-text;
+  margin: auto;
+  margin-top: 36px;
+}
+
+.headerPrc-contant{
+  width: 40%;
+  margin:auto;
+  position: relative;
+  margin-top: 59px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.headerPrc-title{
+  width: 77%;
+  line-height: 3.8rem;
+  text-align: center
+}
+
+.text{
+ font-size: 1.5em;
+}
+
+//pricing
+.headerPrc{
+  color: $color-text;
+  width: 100%;
+  &-3column{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+    &-block{
+      display: flex;
+      padding: 30px 56px;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      border: 2px solid $color-text;
+      margin-top: 38px;
+      box-sizing: border-box;
+      background-color: #fff;
+      &-plan{
+        @extend %font-title;
+        @include font($height: 1rem, $size: 1.5rem, $weigh: bold);
+        color: $color-primary;
+        text-transform: uppercase;
+        margin-top: 30px;
+      }
+      &-cost{
+        color: #0F5F5C;
+        @extend %font-nav;
+        @include font($height: 1rem, $size: 7.2rem, $weigh: bold);
+        margin-top: 50px;
+      }
+      &-time{
+        margin-top: 30px;
+        font-weight: bold;
+      }
+      &-offer{
+        margin-top: 20px;
+        &:nth-child(4n){
+          margin-top: 25px;
+        }
+      }
+      &-button{
+        margin-top: 23px;
+        padding: 17px 26px;
+        @extend %font-nav;
+        @include font($height: 1rem, $size: 1.3rem, $weigh: bold);
+        color: #fff;
+        background-color: $color-text;
+        border-radius: 2px;
+        margin-bottom: 31px;
+        text-transform: uppercase;
+        border: none;
+        &:hover{
+          background-color:$color-primary;
+        }
+      }
+    }
+  }
+}
+
+.headerPrc-title2{
+  font-weight: normal;
+  margin-top: 27px;
+}
