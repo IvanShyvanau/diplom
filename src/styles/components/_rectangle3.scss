@@ -8,14 +8,25 @@
     align-items: center;
     background-image: url(/assets/img/Rectangle3/1.png);
     background-repeat: no-repeat;
-    background-position:800px 100px ;
+    background-position:800px 100px;
+    @include media-mobile{
+    }
+    @include media-tablet{
+      background-position:500px 100px;
+    }
     &-content{
       display: flex;
       flex-direction: column; 
       width: 32%;
       line-height: 2rem;
       margin-left: 10%;
-      
+      &-title{
+        @include media-mobile{
+        }
+        @include media-tablet{
+          line-height: 3rem;
+        }
+      } 
       &-text{
         margin-top: 16px;
       }

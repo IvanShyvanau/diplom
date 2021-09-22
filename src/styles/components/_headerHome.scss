@@ -78,6 +78,7 @@
   color: #ffffff;
   &-number{
     margin-left: 6px;
+    
   }
   &-number__link{
     text-decoration: none;
@@ -303,7 +304,6 @@
 }
 .picfon{
   @include media-mobile{
-    width: 100%;
   }
   @include media-tablet{
     width: 800px;
@@ -507,7 +507,7 @@
     flex-direction: column;
     justify-content: center;
     @include media-mobile{
-      display: flex;
+      
     }
     @include media-tablet{
       width: 100%;
@@ -538,6 +538,7 @@
   color: $color-text;
   flex-direction: column;
   background-color: $color-background2;
+ 
 }
 
 .headerPrc-main{
@@ -550,6 +551,22 @@
   color: $color-text;
 }
 
+.headerPrcblock{
+  width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+  @include media-mobile{
+    
+  }
+  @include media-tablet{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    
+  }
+}
 
 // main logo
 .headerPrc-logo{
@@ -588,7 +605,15 @@
   &-number__link{
     text-decoration: none;
     color: $color-text;
+    @include media-mobile{
+    
+    }
+    @include media-tablet{
+      display: flex;
+      width: 100px;
+    } 
   }
+  
 }
 
 .logoPrc{
@@ -627,6 +652,15 @@
       opacity: 0.5;
       color: #fff;
     }
+    @include media-mobile{
+    
+    }
+    @include media-tablet{
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: nowrap; 
+    }
   }
   &-list{
   display: flex;
@@ -634,6 +668,12 @@
   @extend %font-nav;
   @include font($height: 1rem, $size: 1.3rem, $weigh: normal);
   text-transform: uppercase;
+  @include media-mobile{
+    
+  }
+  @include media-tablet{
+    margin: 0;
+  } 
   }
   &-list__item{
     margin-left: 15px;
@@ -647,7 +687,14 @@
   background-color: $color-text;
   margin: auto;
   margin-top: 36px;
+  @include media-mobile{
+    
+  }
+  @include media-tablet{
+    margin-top: 26px;
+  } 
 }
+
 
 .headerPrc-contant{
   width: 40%;
@@ -663,11 +710,26 @@
 .headerPrc-title{
   width: 77%;
   line-height: 3.8rem;
-  text-align: center
+  text-align: center;
+  @include media-mobile{
+    
+  }
+  @include media-tablet{
+    width: 500px;
+    margin-top: 0;
+  } 
 }
+
 
 .text{
  font-size: 1.5em;
+ @include media-mobile{
+    
+}
+@include media-tablet{
+  width: 400px;
+  text-align: center;
+  }  
 }
 
 //pricing
@@ -679,6 +741,12 @@
     width: 100%;
     justify-content: center;
     margin: auto;
+    @include media-mobile{
+    
+    }
+    @include media-tablet{
+      width: 80%;
+      } 
     &-block{
       display: flex;
       padding: 30px 56px;
@@ -715,6 +783,13 @@
       &-button{
         margin-top: 23px;
         padding: 17px 26px;
+        @include media-mobile{
+    
+        }
+        @include media-tablet{
+          margin-top: 23px;
+          padding: 17px 10px;
+          } 
         @extend %font-nav;
         @include font($height: 1rem, $size: 1.3rem, $weigh: bold);
         color: #fff;

@@ -9,6 +9,11 @@
       width: 70%;
       justify-content: center;
       margin: auto;
+      @include media-mobile{
+      }
+      @include media-tablet{
+        width: 100%;
+      }
       &-block{
         display: flex;
         flex-direction: column;
@@ -17,6 +22,11 @@
         border: 2px solid $color-text;
         margin-top: 38px;
         box-sizing: border-box;
+        @include media-mobile{
+        }
+        @include media-tablet{
+          width: 90%;
+        }
         &-plan{
           @extend %font-title;
           @include font($height: 1rem, $size: 1.5rem, $weigh: bold);
@@ -63,6 +73,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include media-mobile{
+    }
+    @include media-tablet{
+      margin-top: 40px;
+    }
     &-border{
       width: 66px;
       height: 2px;

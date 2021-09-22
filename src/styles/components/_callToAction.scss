@@ -13,6 +13,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @include media-mobile{
+
+    }
+    @include media-tablet{
+      width: 100%;
+    }
   }
   &-title{
     @extend %font-title;
