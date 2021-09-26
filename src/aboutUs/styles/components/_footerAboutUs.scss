@@ -13,7 +13,10 @@
     margin-top: 99px;
     justify-content: space-between;
     @include media-mobile{
-    }
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    } 
     @include media-tablet{
       width: 90%;
       margin-top: 20px;
@@ -21,6 +24,10 @@
   }
   &-contacts{
     width: 30%;
+    @include media-mobile{
+      width: 100%;
+      text-align: center;
+    } 
   }
   &-logo{
 
@@ -63,9 +70,18 @@
   }
   &-block{
     width: 20%;
+    @include media-mobile{
+      width: 100%;
+
+    }
   }
   &-title{
     font-weight: bold;
+    @include media-mobile{
+      font-size: 2.5rem;
+      margin-top: 10px;
+      text-align: center;
+    }
   }
   &-liist{
     margin-top: 15px;
@@ -73,19 +89,35 @@
   &-link{
     text-decoration: none;
     color: $color-text;
+    font-size: 1.6rem;
     &:hover{
       text-decoration: underline;
     }
   }
   &-callback{
     width: 30%;
+    text-align: center;
+      @include media-mobile{
+        margin-top: 10px;
+        
+      }
   }
   &-text4{
     margin-top: 23px;
     line-height: 1.5rem;
+    @include media-mobile{
+      width: 160%;
+      margin-left: 80px;
+      
+    }
   }
   &-input{
     margin-top: 19px;
+    @include media-mobile{
+      margin-left: 30px;
+      
+    }
+    
   }
   &-border{
     width: 1110px;
@@ -123,6 +155,9 @@ form{
   }
 }
 
+.mobileFooterTitle{
+  margin-left: 90px;
+}
 
 @-webkit-keyframes swing {
   15% {
