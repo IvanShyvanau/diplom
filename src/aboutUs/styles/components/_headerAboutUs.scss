@@ -51,7 +51,7 @@
   display: flex;
   justify-content: space-around;
   @include media-mobile{
-      
+  
   }
   @include media-tablet{
     width: 100%;
@@ -145,12 +145,9 @@
   @extend %font-nav;
   @include font($height: 1rem, $size: 1.3rem, $weigh: normal);
   text-transform: uppercase;
-  @include media-mobile{
-      
-  }
   @include media-tablet{
     padding: 0;
-  }
+    }
   }
   &-list__item{
     margin-left: 15px;
@@ -181,7 +178,7 @@
   line-height: 4.8rem;
   text-align: center;
   @include media-mobile{
-      
+    margin-top: 0;  
   }
   @include media-tablet{
     width: 600px;

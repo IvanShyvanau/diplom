@@ -3,7 +3,9 @@
   &-wrapper{
     display: flex;
     margin-top: 137px;
+    @include media-mobile{
     
+    }
     &-2-column{
       display: flex;
       justify-content: space-around;

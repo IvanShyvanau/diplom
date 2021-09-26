@@ -129,6 +129,9 @@
   &-list__item{
     margin-left: 15px;
   }
+  @include media-mobile{
+    display: none !important; 
+ }
 }
 
 .border-botom{
@@ -167,6 +170,9 @@
   color: #fff;
   border: none;
   cursor: pointer;
+  @include media-mobile{
+    padding: 20px 10px !important; 
+ }
 }
 
 // правка
