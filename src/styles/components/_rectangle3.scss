@@ -8,7 +8,7 @@
     align-items: center;
     background-image: url(/assets/img/Rectangle3/1.png);
     background-repeat: no-repeat;
-    background-position:800px 100px;
+    background-position:1110px 100px;
     @include media-mobile{
       background-image: none;
     }
@@ -33,7 +33,11 @@
       } 
       &-text{
         margin-top: 16px;
-        width: 250%;
+        width: 500px;
+        @include media-mobile{
+          width: 250%;
+          
+        }
       }
     }
   }
