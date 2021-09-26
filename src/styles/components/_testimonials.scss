@@ -4,16 +4,25 @@
     display: flex;
     margin-top: 137px;
     @include media-mobile{
-    
+      margin-top: 20px;
     }
     &-2-column{
       display: flex;
       justify-content: space-around;
       align-items: center;
+      @include media-mobile{
+        display: flex;
+        flex-direction: column;
+      }
       &-discription{
         display: flex;
         flex-direction: column;
         width: 28%;
+        @include media-mobile{
+          display: flex;
+          flex-direction: column;
+          width: 90%;
+        }
         &-text{
           @extend %font-testimonials;
           @include font($height: 3.8rem, $size: 2.2rem, $weigh: normal);
@@ -22,6 +31,9 @@
         &-name{ 
           color: $color-primary;
           margin-top: 27px;
+          @include media-mobile{
+            margin-top: 30px;
+          }
         }
         &-post{
           margin-top: 10px;
@@ -30,11 +42,21 @@
       &-photos{
         background-color: #000;
         border-radius: 50%;
+        @include media-mobile{
+          background: none;
+          margin-top: 5px;
+        }
       }
       &-photo{
         width: 405px;
         height: 401px;
         border-radius: 50%;
+        @include media-mobile{
+          width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        margin-top: 20px;
+        }
       }
     }
     
